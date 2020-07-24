@@ -34,7 +34,7 @@ local UIListLayout_3 = Instance.new("UIListLayout")
 
 --Properties:
 
-Hubv1.Name = "Hubv1"
+Hubv1.Name = "ZyHubLib1"
 Hubv1.Parent = game.CoreGui
 
 Tooltip.Name = "Tooltip"
@@ -598,8 +598,10 @@ ActaullGamer.BackgroundTransparency = 1.000
 ActaullGamer.BorderSizePixel = 0
 ActaullGamer.Size = UDim2.new(1, 0, 1, 0)
 ActaullGamer.CanvasSize = UDim2.new(0, 0, 1.5, 0)
-	ActaullGamer.Visible = vis
-	ActaullGame.ZIndex = 1
+ActaullGamer.Visible = vis
+ActaullGame.ZIndex = 1
+	
+	
 UIListLayout_3.Parent = ActaullGamer
 UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
 end
@@ -607,7 +609,7 @@ end
 function ZyHub:MakeNavigator(NavigateTab,TooltipText)
 local SideExampler = Instance.new("TextButton")
 local findtab = middle[NavigateTab]
-SideExampler.Name = "SideExample"
+SideExampler.Name = "Navigator ".. findtab.Name
 SideExampler.Parent = ScrollingFrame
 SideExampler.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 SideExampler.BackgroundTransparency = 1.000
