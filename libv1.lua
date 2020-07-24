@@ -649,6 +649,31 @@ SideExampler.TextWrapped = true
 		blcok.Visible  = false
 	end)
 end
+function ZyHub:MakeText(text,tab2)
+			local tab = middle[tab2]
+local TextFramer = Instance.new("Frame")
+local Textlabler = Instance.new("TextLabel")
+
+TextFramer.Name = "TextFrame"
+TextFramer.Parent = tab
+TextFramer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextFramer.BackgroundTransparency = 1.000
+TextFramer.Position = UDim2.new(0.124031015, 0, 0.170423299, 0)
+TextFramer.Size = UDim2.new(0.899999976, 0, 0, 80)
+
+Textlabler.Name = "TextLabel"
+Textlabler.Parent = TextFramer
+Textlabler.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Textlabler.BackgroundTransparency = 1.000
+Textlabler.Size = UDim2.new(1, 0, 1, 0)
+Textlabler.Font = Enum.Font.SourceSansLight
+Textlabler.Text = text
+Textlabler.TextColor3 = Color3.fromRGB(185, 187, 190)
+Textlabler.TextSize = 25.000
+
+tab.CanvasSize = tab.CanvasSize + UDim2.new(0, 0, 0, 80)
+end
+
 
 
 coroutine.wrap(tooltip)(ResizeLabel,"Resizes the gui")
