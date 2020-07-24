@@ -602,8 +602,8 @@ ActaullGamer.Visible = vis
 ActaullGame.ZIndex = 1
 	
 	
-UIListLayout_3.Parent = ActaullGamer
-UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_3r.Parent = ActaullGamer
+UIListLayout_3r.SortOrder = Enum.SortOrder.LayoutOrder
 end
 
 function ZyHub:MakeNavigator(NavigateTab,TooltipText)
