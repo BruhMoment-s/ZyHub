@@ -588,9 +588,9 @@ end
 
 function ZyHub:MakeTab(name,vis)
 	local ActaullGamer = Instance.new("ScrollingFrame")
-local UIListLayout_3r = Instance.new("UIListLayout")
+	local UIListLayout_3r = Instance.new("UIListLayout")
 	
-	ActaullGamer.Name = name
+ActaullGamer.Name = name
 ActaullGamer.Parent = middle
 ActaullGamer.Active = true
 ActaullGamer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -599,11 +599,13 @@ ActaullGamer.BorderSizePixel = 0
 ActaullGamer.Size = UDim2.new(1, 0, 1, 0)
 ActaullGamer.CanvasSize = UDim2.new(0, 0, 1.5, 0)
 ActaullGamer.Visible = vis
-ActaullGame.ZIndex = 1
+ActaullGamer.ZIndex = 1
 	
 	
 UIListLayout_3r.Parent = ActaullGamer
 UIListLayout_3r.SortOrder = Enum.SortOrder.LayoutOrder
+	
+	
 end
 
 function ZyHub:MakeNavigator(NavigateTab,TooltipText)
