@@ -411,7 +411,8 @@ end
 
   start2 = Color3.fromRGB(0,0,0)
      End2 = Color3.fromRGB(0,0,0)
-function ZyHub:MakeToggle(Source,txt,tab)
+function ZyHub:MakeToggle(Source,txt,tab2)
+	local tab = middle[tab2]
 local Toggler = Instance.new("Frame")
 local ToggleFramer = Instance.new("ImageLabel")
 local FrameButtonr = Instance.new("TextButton")
@@ -506,7 +507,8 @@ end)
 end
 
 
-function ZyHub:MakeButton(Source,txt,tab)
+function ZyHub:MakeButton(Source,txt,tab2)
+		local tab = middle[tab2]
 local Buttonr = Instance.new("Frame")
 local ScriptButtonr = Instance.new("TextButton")
 
@@ -534,7 +536,8 @@ exececutesc(Source)
 end)
 end
 
-function ZyHub:MakeTextBox(Source,txt,tab)
+function ZyHub:MakeTextBox(Source,txt,tab2)
+		local tab = middle[tab2]
 	local TextBoxr = Instance.new("Frame")
 local TextboxButtonr = Instance.new("TextButton")
 local TextBox_2r = Instance.new("TextBox")
