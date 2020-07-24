@@ -695,7 +695,7 @@ Textlabler.Text = text
 Textlabler.TextColor3 = Color3.fromRGB(185, 187, 190)
 Textlabler.TextSize = 25.000
 Textlabler.ClearTextOnFocus = false
-Textlabler.TextEditable = false
+Textlabler.TextEditable  = false
 	tab.CanvasSize = tab.CanvasSize + UDim2.new(0, 0, 0, 80)
 	
 	
