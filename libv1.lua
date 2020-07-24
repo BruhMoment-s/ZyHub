@@ -694,8 +694,8 @@ Textlabler.Font = Enum.Font.SourceSansLight
 Textlabler.Text = text
 Textlabler.TextColor3 = Color3.fromRGB(185, 187, 190)
 Textlabler.TextSize = 25.000
-TextBox.ClearTextOnFocus = false
-TextBox.TextEditable = false
+Textlabler.ClearTextOnFocus = false
+Textlabler.TextEditable = false
 	tab.CanvasSize = tab.CanvasSize + UDim2.new(0, 0, 0, 80)
 	
 	
