@@ -473,7 +473,7 @@ function ZyHub:MakeToggle(Source,txt,tab2)
 	toggleitemr.TextWrapped = true
 	toggleitemr.TextXAlignment = Enum.TextXAlignment.Left
 		tab.CanvasSize = tab.CanvasSize + UDim2.new(0, 0, 0, 80)
-	 toggled = false
+	 toggled = true
 	toggleitemr.MouseButton1Down:Connect(function()
 		
 	
