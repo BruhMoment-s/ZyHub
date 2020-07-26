@@ -297,6 +297,45 @@ local XedvedOnly = Instance.new("BoolValue",game.Players.LocalPlayer)
 XedvedOnly.Name = "usingXedved"
 XedvedOnly.Value = true
 --]]
+
+function opener()
+		local Framer = Instance.new("ImageLabel")
+	Framer.Name = "blcokv3"
+Framer.Parent = Hubv1
+Framer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Framer.BackgroundTransparency = 1.000
+Framer.Position = Frame.Position - UDim2.new(0,0,0,100)
+Framer.Size = Frame.Size
+Framer.Image = "rbxassetid://3570695787"
+Framer.ImageColor3 = Color3.fromRGB(38, 38, 38)
+Framer.ScaleType = Enum.ScaleType.Slice
+Framer.SliceCenter = Rect.new(100, 100, 100, 100)
+	Framer.SliceScale = 0.120
+Framer.ImageTransparency = 1
+		Frame.Visible = false
+	for i = 1,0,-0.1 do
+		Framer.ImageTransparency = i
+		wait()
+	end
+	wait()
+	Framer.ImageTransparency = 0
+
+	wait()
+
+	Framer:TweenPosition(UDim2.new(Frame.Position.X.Scale,Frame.Position.X.Offset,Frame.Position.Y.Scale,Frame.Position.Y.Offset))
+	wait(1)
+	Frame.Visible = true
+	for i = 0,1,0.1 do
+		Framer.ImageTransparency = i
+		wait()
+	end
+	
+	wait()
+	Framer.ImageTransparency = 1
+--	Frame.Visible  = true
+end
+opener()
+
 function closer()
 	local Framer = Instance.new("ImageLabel")
 	Framer.Name = "blcokv2"
@@ -327,6 +366,7 @@ Framer.ImageTransparency = 1
 		wait()
 	end
 	wait()
+	
 	Framer.ImageTransparency = 1
 	Hubv1:Destroy()
 end
