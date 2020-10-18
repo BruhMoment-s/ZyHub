@@ -245,7 +245,7 @@ Blurr.ZIndex = 100
 Blurr.ImageTransparency = 1
 Blurr.Visible = false
 -- Scripts:
-local ui = {}
+ui = {}
 
 function ui:MakeWindow(Name)
 	local Window = Instance.new("ScrollingFrame")
