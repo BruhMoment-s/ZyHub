@@ -835,7 +835,7 @@ end
 Intro()
 
 function Resize()
-	local b = border
+	local b = shadow
 	local mouse = game.Players.LocalPlayer:GetMouse()
 	local Pressing = false
 
@@ -849,7 +849,7 @@ function Resize()
 
 
 	b.InputBegan:connect(function(key)
-		if key.UserInputType == Enum.UserInputType.MouseButton1 then
+		if key.UserInputType == Enum.UserInputType.MouseButton2 then
 			Pressing = true
 			RecordedLastX = mouse.X
 			RecordedLastY = mouse.Y
