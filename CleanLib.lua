@@ -443,7 +443,7 @@ function ui:MakeWindow(Name)
 		sliderhead.Parent = sliderthing
 		sliderhead.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		sliderhead.BackgroundTransparency = 1.000
-		sliderhead.Position = UDim2.new(0.638999999, 0, -0.340000004, 1)
+		sliderhead.Position = UDim2.new(-0.329, 0,-0.34, 1)
 		sliderhead.Size = UDim2.new(0, 20, 0, 20)
 		sliderhead.Image = "rbxassetid://3570695787"
 		sliderhead.ImageColor3 = Color3.fromRGB(204, 84, 77)
@@ -491,12 +491,12 @@ function ui:MakeWindow(Name)
 				-- turn off
 				coroutine.wrap(transitionColor)(sliderthing,sliderthing.ImageColor3,Color3.fromRGB(255, 105, 97))
 				transitionColor(sliderhead,sliderhead.ImageColor3,Color3.fromRGB(204, 84, 77))
-				sliderhead:TweenPosition(UDim2.new(0.639, 0,-0.34, 1),"Out","Quad",0.5)
+				sliderhead:TweenPosition(UDim2.new(-0.329, 0,-0.34, 1),"Out","Quad",0.5)
 			else
 				-- turn on
 				coroutine.wrap(transitionColor)(sliderthing,sliderthing.ImageColor3,Color3.fromRGB(119, 221, 119))
 				transitionColor(sliderhead,sliderhead.ImageColor3,Color3.fromRGB( 80, 150, 80))
-				sliderhead:TweenPosition(UDim2.new(-0.329, 0,-0.34, 1),"Out","Quad",0.5)
+				sliderhead:TweenPosition(UDim2.new(0.639, 0,-0.34, 1),"Out","Quad",0.5)
 			end
 			enable = not enable
 			pcall(callback,enable)
@@ -835,7 +835,7 @@ end
 Intro()
 
 function Resize()
-	local b = shadow
+	local b = border
 	local mouse = game.Players.LocalPlayer:GetMouse()
 	local Pressing = false
 
@@ -892,7 +892,7 @@ function Resize()
 
 
 end
-
+Resize()
 local function VAMYOX_fake_script() -- ToolTip.TooltipLScript 
 	if CleanUi ~= nil then
 		local script = Instance.new('LocalScript', ToolTip)
