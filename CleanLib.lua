@@ -458,7 +458,7 @@ function ui:MakeWindow(Name)
 		ToggleText.Position = UDim2.new(0.0439251252, 0, 0, 0)
 		ToggleText.Size = UDim2.new(0.76470542, 0, 0.699999988, 0)
 		ToggleText.Font = Enum.Font.SourceSansLight
-		ToggleText.Text = "Text"
+		ToggleText.Text = Text
 		ToggleText.TextColor3 = Color3.fromRGB(255, 255, 255)
 		ToggleText.TextScaled = true
 		ToggleText.TextSize = 25.000
