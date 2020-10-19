@@ -505,6 +505,135 @@ function ui:MakeWindow(Name)
 		ToggleButton.MouseButton1Down:Connect(fire)
 
 	end
+	--Slider
+	function newlib:Slider(Text,Min,Max,Callback)
+		local SliderBox = Instance.new("ImageLabel")
+		local SliderText = Instance.new("TextLabel")
+		local Slider = Instance.new("ImageLabel")
+		local SliderDeco = Instance.new("ImageLabel")
+		local SliderMain = Instance.new("ImageButton")
+		
+		SliderBox.Name = "SliderBox"
+		SliderBox.Parent = Window
+		SliderBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		SliderBox.BackgroundTransparency = 1.000
+		SliderBox.Position = UDim2.new(0.00668151444, 0, 0.00454235729, 0)
+		SliderBox.Size = UDim2.new(1, 0, 0, 40)
+		SliderBox.Image = "rbxassetid://3570695787"
+		SliderBox.ImageColor3 = Color3.fromRGB(30, 30, 30)
+		SliderBox.ScaleType = Enum.ScaleType.Slice
+		SliderBox.SliceCenter = Rect.new(100, 100, 100, 100)
+		SliderBox.SliceScale = 0.100
+
+		SliderText.Name = "SliderText"
+		SliderText.Parent = SliderBox
+		SliderText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		SliderText.BackgroundTransparency = 1.000
+		SliderText.Position = UDim2.new(0.0439251252, 0, 0, 0)
+		SliderText.Size = UDim2.new(0.76470542, 0, 0.699999988, 0)
+		SliderText.Font = Enum.Font.SourceSansLight
+		SliderText.Text = Text
+		SliderText.TextColor3 = Color3.fromRGB(255, 255, 255)
+		SliderText.TextScaled = true
+		SliderText.TextSize = 25.000
+		SliderText.TextWrapped = true
+		SliderText.TextXAlignment = Enum.TextXAlignment.Left
+
+		Slider.Name = "Slider"
+		Slider.Parent = SliderBox
+		Slider.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Slider.BackgroundTransparency = 1.000
+		Slider.Position = UDim2.new(0.599109173, 0, 0.449999988, 0)
+		Slider.Size = UDim2.new(0, 123, 0, 10)
+		Slider.Image = "rbxassetid://3570695787"
+		Slider.ScaleType = Enum.ScaleType.Slice
+		Slider.SliceCenter = Rect.new(100, 100, 100, 100)
+		Slider.SliceScale = 0.120
+
+		SliderDeco.Name = "SliderDeco"
+		SliderDeco.Parent = Slider
+		SliderDeco.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		SliderDeco.BackgroundTransparency = 1.000
+		SliderDeco.Size = UDim2.new(0.100000001, 0, 1, 0)
+		SliderDeco.Image = "rbxassetid://3570695787"
+		SliderDeco.ImageColor3 = Color3.fromRGB(55, 255, 0)
+		SliderDeco.ScaleType = Enum.ScaleType.Slice
+		SliderDeco.SliceCenter = Rect.new(100, 100, 100, 100)
+		SliderDeco.SliceScale = 0.120
+
+		SliderMain.Name = "SliderMain"
+		SliderMain.Parent = SliderDeco
+		SliderMain.BackgroundColor3 = Color3.fromRGB(5, 24, 0)
+		SliderMain.BackgroundTransparency = 1.000
+		SliderMain.BorderSizePixel = 0
+		SliderMain.Position = UDim2.new(0.899999976, 0, 0, 0)
+		SliderMain.Size = UDim2.new(0, 15, 1, 0)
+
+		
+		local SliderBtn = SliderMain
+		local Player = game:GetService("Players").LocalPlayer
+		local UIS = game:GetService("UserInputService")
+		local RuS = game:GetService("RunService")
+
+		-- Properties
+		local held = false
+		local percentage = 0
+		local min = 0
+		local outputmin = Min
+		local outputmax = Max
+		local max = 1
+		local step2 = string.len(tostring(outputmax))
+		local step = "0."
+		for i = 0,step2 do
+			step = step.. "0"
+		end
+		step = tonumber(step)
+		max = max / max
+		outputmax = outputmax - outputmin
+
+		local function snap(number, factor)
+			if factor == 0 then
+				return number
+			else
+				return math.floor(number/factor+0.5)*factor
+			end
+		end
+
+		UIS.InputEnded:connect(function(input, processed)
+			if input.UserInputType == Enum.UserInputType.MouseButton1 then
+				held = false
+			end
+		end)
+		SliderBtn.MouseEnter:connect(function()
+			ToolTip.Visible = true
+			ToolTip.Text = percentage * outputmax
+		end)
+		SliderBtn.MouseLeave:connect(function()
+			ToolTip.Visible = false
+		end)
+		SliderBtn.MouseButton1Down:connect(function()
+			held = true
+		end)
+
+		RuS.RenderStepped:connect(function(delta)
+			if held then
+
+				local MousePos = UIS:GetMouseLocation().X
+				local BtnPos = SliderDeco.Size
+				local SliderSize = Slider.AbsoluteSize.X
+				local SliderPos = Slider.AbsolutePosition.X
+				local pos = snap((MousePos-SliderPos)/SliderSize,step)
+				percentage = math.clamp(pos,0,1)
+				--SliderBtn.Position = UDim2.new(percentage,min,BtnPos.Y.Scale, BtnPos.Y.Offset)
+				SliderDeco.Size =UDim2.new(percentage,min,BtnPos.Y.Scale, BtnPos.Y.Offset)
+				pcall(Callback,math.floor(percentage * outputmax ))
+			end
+		end)
+		
+	end
+	
+	
+	
 	return newlib
 end
 function ui:MenuText(Text)
