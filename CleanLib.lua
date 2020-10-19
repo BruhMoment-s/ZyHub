@@ -407,7 +407,7 @@ function ui:MakeWindow(Name)
 
 	-- ToggleBox
 
-	function newlib:ToggleBox(Text,callback)
+	function newlib:Toggle(Text,callback)
 		local callback = callback or function() end
 		local ToggleBox = Instance.new("ImageLabel")
 		local sliderthing = Instance.new("ImageLabel")
