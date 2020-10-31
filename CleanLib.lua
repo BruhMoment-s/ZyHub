@@ -1553,24 +1553,6 @@ coroutine.wrap(VAMYOX_fake_script)()
 
 
 
-local win = ui:MakeWindow("Hello")
-local textArgs = {"asd","asd2","bruh"}
-win:DropBox(textArgs,function(val)
-	print(val)
-end)
-win:ColorPick("Color",function(val)
-
-end)
-win:Button("Test",function()
-	print("hi")
-end)
-win:InputBox("Hi",function(val)
-	print(val)
-end)
-win:Slider("Slider test",0,100,function(val)
-	print(val)
-end)
-
 
 
 --[[
