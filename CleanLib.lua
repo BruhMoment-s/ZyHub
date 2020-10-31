@@ -216,6 +216,8 @@ SideButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 SideButton.TextScaled = true
 SideButton.TextSize = 14.000
 SideButton.TextWrapped = true
+SideButton.Visible = false
+
 
 ResizeLabel.Name = "ResizeLabel"
 ResizeLabel.Parent = MainItems
