@@ -1356,7 +1356,7 @@ SideMenuButton.MouseButton1Down:Connect(function()
 	ToggleSide()
 end)
 
-ui:MenuText("Ui made by Xedved Developers Join here: https://discord.gg/nCHhVw")
+ui:MenuText("Ui made by BetterLua Developers Join here: https://discord.gg/37TysQr")
 
 local Resizing = false
 local Dragging = false
