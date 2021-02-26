@@ -1,0 +1,911 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local CleanerUi = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local UIGradient = Instance.new("UIGradient")
+local Topbar = Instance.new("Frame")
+local ImageButton = Instance.new("ImageButton")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local TextLabel = Instance.new("TextLabel")
+local MainMenu = Instance.new("Frame")
+local Sidemenu = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local UIGradient_2 = Instance.new("UIGradient")
+local Frame_2 = Instance.new("ScrollingFrame")
+local UIListLayout = Instance.new("UIListLayout")
+local Frame_3 = Instance.new("ScrollingFrame")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local Windows = Instance.new("Frame")
+local ButtonUi = Instance.new("TextButton")
+local Sample = Instance.new("ImageLabel")
+local UICorner_3 = Instance.new("UICorner")
+local UIGradient_3 = Instance.new("UIGradient")
+
+
+--Properties:
+
+CleanerUi.Name = "CleanerUi Lib"
+CleanerUi.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+CleanerUi.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = CleanerUi
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Position = UDim2.new(0.536546648, 0, 0.416927874, 0)
+Frame.Size = UDim2.new(0, 451, 0, 203)
+
+UICorner.Parent = Frame
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(20, 20, 20)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(66, 66, 66))}
+UIGradient.Rotation = -90
+UIGradient.Parent = Frame
+
+Topbar.Name = "Topbar"
+Topbar.Parent = Frame
+Topbar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Topbar.BackgroundTransparency = 1.000
+Topbar.Size = UDim2.new(1, 0, 0.150000006, 0)
+
+ImageButton.Parent = Topbar
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.BackgroundTransparency = 1.000
+ImageButton.Size = UDim2.new(0, 30, 1, 0)
+ImageButton.Image = "rbxassetid://5302627423"
+
+UIAspectRatioConstraint.Parent = ImageButton
+UIAspectRatioConstraint.AspectRatio = 0.985
+
+TextLabel.Parent = Topbar
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.0665188581, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 179, 0, 30)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "<i>Title here</i>"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel.RichText = true
+
+MainMenu.Name = "MainMenu"
+MainMenu.Parent = Frame
+MainMenu.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainMenu.BackgroundTransparency = 1.000
+MainMenu.Size = UDim2.new(1, 0, 1, 0)
+MainMenu.Visible = false
+MainMenu.ZIndex = 2
+
+Sidemenu.Name = "Side menu"
+Sidemenu.Parent = MainMenu
+Sidemenu.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sidemenu.Size = UDim2.new(0.300000012, 0, 0, 203)
+
+UICorner_2.Parent = Sidemenu
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(93, 93, 93)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(56, 56, 56))}
+UIGradient_2.Rotation = 90
+UIGradient_2.Parent = Sidemenu
+
+Frame_2.Name = "Frame"
+Frame_2.Parent = Sidemenu
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.BackgroundTransparency = 1.000
+Frame_2.BorderSizePixel = 0
+Frame_2.ClipsDescendants = true
+Frame_2.Selectable = false
+Frame_2.Size = UDim2.new(1, 0, 1, 0)
+Frame_2.ScrollBarThickness = 0
+
+
+
+UIListLayout.Parent = Frame_2
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+Frame_3.Name = "Frame"
+Frame_3.Parent = MainMenu
+Frame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_3.BackgroundTransparency = 1.000
+Frame_3.BorderSizePixel = 0
+Frame_3.ClipsDescendants = false
+Frame_3.Position = UDim2.new(0.300000012, 0, 0, 0)
+Frame_3.Selectable = false
+Frame_3.Size = UDim2.new(0.699999988, 0, 1, 0)
+Frame_3.ScrollBarThickness = 0
+
+
+
+UIListLayout_2.Parent = Frame_3
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+
+
+Windows.Name = "Windows"
+Windows.Parent = Frame
+Windows.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Windows.BackgroundTransparency = 1.000
+Windows.Position = UDim2.new(0, 0, 0.150000066, 0)
+Windows.Size = UDim2.new(1, 0, 0.849999845, 0)
+Windows.Visible = false
+
+Sample.Name = "Sample"
+Sample.Parent = Topbar
+Sample.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sample.BackgroundTransparency = 1.000
+Sample.Image = "http://www.roblox.com/asset/?id=4560909609"
+Sample.ImageTransparency = 0.600
+Sample.Visible = false
+
+local Blinkr = Frame:Clone()
+Blinkr.Parent = Frame
+Blinkr.Position = UDim2.new(0,0,0,0)
+Blinkr.BackgroundTransparency = 1
+Blinkr.Visible = false
+Blinkr.ZIndex = 1
+for i,v in pairs(Blinkr:GetDescendants()) do
+	if v.Parent == Blinkr then
+		if v.ClassName ~= "UiCorner" or v.ClassName ~= "UIGradient" then
+		else
+			v:Destroy()
+		end
+	else
+		v:Destroy()
+	end
+end
+
+local function fade(input,prop,dir)
+	if dir == "In" then
+		for i = 0,1,0.1 do
+			input[prop] = i
+			wait()
+		end
+	else
+		for i = 1,0,-0.1 do
+			input[prop] = i
+			wait()
+		end
+	end
+end
+local function cleanup()
+	for i,v in pairs(Windows:GetChildren()) do
+		v.Visible = false
+	end
+	Windows.Visible = true
+end
+local function GoToMenu()
+	local visthing = nil
+	for i,v in pairs(Windows:GetChildren()) do
+		if v.Visible == true then
+			visthing = v
+			break
+		end
+	end
+	Blinkr.Visible = true
+	fade(Blinkr,"BackgroundTransparency","Out")
+	if visthing ~= nil then
+		visthing.Visible = false
+	end
+	fade(TextLabel,"TextTransparency","In")
+	Blinkr.Visible = false
+	MainMenu.Visible = true
+
+	Sidemenu.Size = UDim2.new(0,0,1,0)
+	Sidemenu:TweenSize(UDim2.new(0.3,0,1,0),"Out","Quad",0.5)
+
+	for i,v in pairs(Frame_3:GetDescendants()) do
+		if v.ClassName == "TextLabel" then
+			fade(v,"TextTransparency","Out")
+		elseif v.ClassName == "ImageLabel" then
+			fade(v,"ImageTransparency","Out")
+		elseif v.ClassName == "TextBox" then
+			fade(v,"TextTransparency","Out")
+		elseif v.ClassName == "TextButton"   then
+			if v.BackgroundTransparency == 1 and v.Text ~= "" then
+				fade(v,"TextTransparency","Out")
+			elseif v.TextTransparency == 1 and v.BackgroundTransparency == 1 or v.Text == "" and v.BackgroundTransparency == 1 then
+				fade(v,"BackgroundTransparency","Out")
+			end
+		end
+	end
+end
+
+
+-- Scripts:
+local ui = {}
+ImageButton.MouseButton1Down:Connect(GoToMenu)
+local function GoToWindow(Window)
+	for i,v in pairs(Frame_3:GetDescendants()) do
+		if v.ClassName == "TextLabel" then
+			fade(v,"TextTransparency","In")
+		elseif v.ClassName == "ImageLabel" then
+			fade(v,"ImageTransparency","In")
+		elseif v.ClassName == "TextBox" then
+			fade(v,"TextTransparency","In")
+		elseif v.ClassName == "TextButton"   then
+			if v.BackgroundTransparency == 1 and v.Text ~= "" then
+				fade(v,"TextTransparency","In")
+			elseif v.TextTransparency == 1 and v.BackgroundTransparency == 1 or v.Text == "" and v.BackgroundTransparency == 1 then
+				fade(v,"BackgroundTransparency","In")
+			end
+		end
+	end
+
+	Sidemenu.Size = UDim2.new(0.3,0,1,0)
+	Sidemenu:TweenSize(UDim2.new(0,0,1,0),"Out","Quad",0.5)
+	Blinkr.Visible = true
+	fade(TextLabel,"TextTransparency","Out")
+	Window.Visible = true
+	fade(Blinkr,"BackgroundTransparency","In")
+	Blinkr.Visible = false
+	MainMenu.Visible =  false
+
+
+end
+function ui:Title(Title)
+	TextLabel.Text = "<i>".. Title .. "</i>"
+end
+function ui:MakeText(Text)
+	local TextLabel_4 = Instance.new("TextLabel")
+
+	TextLabel_4.Parent = Frame_3
+	TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel_4.BackgroundTransparency = 1.000
+	TextLabel_4.BorderSizePixel = 0
+	TextLabel_4.Size = UDim2.new(1, 0, 0, 25)
+	TextLabel_4.Font = Enum.Font.Code
+	TextLabel_4.Text = Text
+	TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel_4.TextSize = 25.000
+	TextLabel_4.TextWrapped = true
+	TextLabel.TextScaled = true
+end
+
+
+function ui:Window(WName)
+	local lui = {}
+	local TestWindow = Instance.new("ScrollingFrame")
+	local UIListLayout_3 = Instance.new("UIListLayout")
+	local WindowButton = Instance.new("TextButton")
+	TestWindow.Name = WName
+	TestWindow.Parent = Windows
+	TestWindow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TestWindow.BackgroundTransparency = 1.000
+	TestWindow.BorderSizePixel = 0
+	TestWindow.Selectable = false
+	TestWindow.Size = UDim2.new(1, 0, 1, 0)
+	TestWindow.BottomImage = "rbxassetid://5614579544"
+	TestWindow.MidImage = "rbxassetid://5614579544"
+	TestWindow.TopImage = "rbxassetid://5614579544"
+	TestWindow.Visible = false
+	
+	WindowButton.Parent = Frame_2
+	WindowButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	WindowButton.BackgroundTransparency = 1.000
+	WindowButton.BorderSizePixel = 0
+	WindowButton.Size = UDim2.new(1, 0, 0, 25)
+	WindowButton.Font = Enum.Font.Code
+	WindowButton.Text = WName
+	WindowButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+	WindowButton.TextSize = 25.000
+	WindowButton.TextWrapped = true
+	WindowButton.TextScaled = true
+	WindowButton.MouseButton1Down:Connect(function()
+		GoToWindow(TestWindow)
+	end)
+
+
+	UIListLayout_3.Parent = TestWindow
+	UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+
+	function lui:Button(Text,callback)
+		local callback = callback or function() end
+		local ButtonUi = Instance.new("TextButton")
+		local UICorner_3 = Instance.new("UICorner")
+		local UIGradient_3 = Instance.new("UIGradient")
+
+		ButtonUi.Name = "ButtonUi"
+		ButtonUi.Parent = TestWindow
+		ButtonUi.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+		ButtonUi.BackgroundTransparency = 1.000
+		ButtonUi.ClipsDescendants = true
+		ButtonUi.Size = UDim2.new(1, 0, 0, 35)
+		ButtonUi.AutoButtonColor = false
+		ButtonUi.Font = Enum.Font.SourceSansSemibold
+		ButtonUi.Text = Text
+		ButtonUi.TextColor3 = Color3.fromRGB(255, 255, 255)
+		ButtonUi.TextScaled = true
+		ButtonUi.TextSize = 14.000
+		ButtonUi.TextWrapped = true
+		TestWindow.CanvasSize = TestWindow.CanvasSize + UDim2.new(0,0,0,35)
+
+		UICorner_3.Parent = ButtonUi
+
+		UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(161, 161, 161))}
+		UIGradient_3.Rotation = 90
+		UIGradient_3.Parent = ButtonUi
+
+
+		local ms = game.Players.LocalPlayer:GetMouse()
+		local btn = script.Parent
+		local sample = Sample
+		local function fire()
+			pcall(callback)
+			local c = Sample:Clone()
+			c.Visible = true
+			c.Parent = ButtonUi
+			local x, y = (ms.X - c.AbsolutePosition.X), (ms.Y - c.AbsolutePosition.Y)
+			c.Position = UDim2.new(0, x, 0, y)
+			local len, size = 0.35, nil
+			if ButtonUi.AbsoluteSize.X >= ButtonUi.AbsoluteSize.Y then
+				size = (ButtonUi.AbsoluteSize.X * 1.5)
+			else
+				size = (ButtonUi.AbsoluteSize.Y * 1.5)
+			end
+			c:TweenSizeAndPosition(UDim2.new(0, size, 0, size), UDim2.new(0.5, (-size / 2), 0.5, (-size / 2)), 'Out', 'Quad', len, true, nil)
+			for i = 1, 10 do
+				c.ImageTransparency = c.ImageTransparency + 0.05
+				wait(len / 12)
+			end
+			c:Destroy()
+		end
+		ButtonUi.MouseButton1Down:connect(fire)
+	end
+	function lui:TextInput(Text,callback)
+		local callback = callback or function() end
+		local TextInput = Instance.new("Frame")
+		local TextBoxInput = Instance.new("TextBox")
+		local UICorner_4 = Instance.new("UICorner")
+
+
+		TextInput.Name = "TextInput"
+		TextInput.Parent = TestWindow
+		TextInput.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TextInput.BackgroundTransparency = 1.000
+		TextInput.Size = UDim2.new(1, 0, 0, 35)
+
+		TextBoxInput.Name = "TextBoxInput"
+		TextBoxInput.Parent = TextInput
+		TextBoxInput.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
+		TextBoxInput.BackgroundTransparency = 1.000
+		TextBoxInput.ClipsDescendants = true
+		TextBoxInput.Size = UDim2.new(1, 0, 1, 0)
+		TextBoxInput.ClearTextOnFocus = false
+		TextBoxInput.Font = Enum.Font.SourceSansLight
+		TextBoxInput.PlaceholderText = Text
+		TextBoxInput.Text = ""
+		TextBoxInput.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TextBoxInput.TextScaled = true
+		TextBoxInput.TextSize = 14.000
+		TextBoxInput.TextWrapped = true
+	
+		UICorner_4.Parent = TextBoxInput
+
+
+		TestWindow.CanvasSize = TestWindow.CanvasSize + UDim2.new(0,0,0,35)
+
+		local ms = game.Players.LocalPlayer:GetMouse()
+
+		local btn = TextBoxInput
+		local sample = Sample
+
+		local function FocusGained(callback)
+			local c = sample:Clone()
+			c.Parent = btn
+			c.Visible = true
+			local x, y = (ms.X - c.AbsolutePosition.X), (ms.Y - c.AbsolutePosition.Y)
+			c.Position = UDim2.new(0, x, 0, y)
+			local len, size = 0.35, nil
+			if btn.AbsoluteSize.X >= btn.AbsoluteSize.Y then
+				size = (btn.AbsoluteSize.X * 1.5)
+			else
+				size = (btn.AbsoluteSize.Y * 1.5)
+			end
+			c:TweenSizeAndPosition(UDim2.new(0, size, 0, size), UDim2.new(0.5, (-size / 2), 0.5, (-size / 2)), 'Out', 'Quad', len, true, nil)
+			for i = 1, 10 do
+				c.ImageTransparency = c.ImageTransparency + 0.05
+				wait(len / 12)
+			end
+			c:Destroy()
+		end
+		local function fire2()
+			local text = TextBoxInput.Text
+			FocusGained()
+			pcall(callback,text)
+
+		end
+		TextBoxInput.FocusLost:Connect(fire2)
+
+	end
+	function lui:Toggle(Text,callback)
+		local callback = callback or function() end
+		local Toggle = Instance.new("Frame")
+		local OnSwitch = Instance.new("Frame")
+		local UICorner_5 = Instance.new("UICorner")
+		local UIGradient_4 = Instance.new("UIGradient")
+		local OffSwitch = Instance.new("Frame")
+		local UICorner_6 = Instance.new("UICorner")
+		local UIGradient_5 = Instance.new("UIGradient")
+		local OptionText = Instance.new("TextLabel")
+		local UIGradient_6 = Instance.new("UIGradient")
+		local ToggleButton = Instance.new("TextButton")
+
+
+		Toggle.Name = "Toggle"
+		Toggle.Parent = TestWindow
+		Toggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Toggle.BackgroundTransparency = 1.000
+		Toggle.Position = UDim2.new(0, 0, 0.405679584, 0)
+		Toggle.Size = UDim2.new(1, 0, 0, 35)
+
+		OnSwitch.Name = "OnSwitch"
+		OnSwitch.Parent = Toggle
+		OnSwitch.BackgroundColor3 = Color3.fromRGB(255, 7, 102)
+		OnSwitch.Position = UDim2.new(0.0266075395, 0, -0.0102728717, 0)
+		OnSwitch.Size = UDim2.new(0, 25, 0, 25)
+
+		UICorner_5.CornerRadius = UDim.new(0, 20)
+		UICorner_5.Parent = OnSwitch
+
+		UIGradient_4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(161, 161, 161))}
+		UIGradient_4.Rotation = 90
+		UIGradient_4.Parent = OnSwitch
+
+		OffSwitch.Name = "OffSwitch"
+		OffSwitch.Parent = Toggle
+		OffSwitch.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		OffSwitch.Position = UDim2.new(0.106430158, 0, -0.0184700787, 0)
+		OffSwitch.Size = UDim2.new(0, 25, 0, 25)
+
+		UICorner_6.CornerRadius = UDim.new(0, 20)
+		UICorner_6.Parent = OffSwitch
+
+		UIGradient_5.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(161, 161, 161))}
+		UIGradient_5.Rotation = 90
+		UIGradient_5.Parent = OffSwitch
+
+		OptionText.Name = "OptionText"
+		OptionText.Parent = Toggle
+		OptionText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		OptionText.BackgroundTransparency = 1.000
+		OptionText.Position = UDim2.new(0.177605271, 0, -0.0112357, 0)
+		OptionText.Size = UDim2.new(0, 203, 0, 25)
+		OptionText.Font = Enum.Font.SourceSansSemibold
+		OptionText.TextColor3 = Color3.fromRGB(255, 255, 255)
+		OptionText.TextSize = 25.000
+		OptionText.TextWrapped = true
+		OptionText.TextXAlignment = Enum.TextXAlignment.Left
+
+		UIGradient_6.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(161, 161, 161))}
+		UIGradient_6.Rotation = 90
+		UIGradient_6.Parent = OptionText
+
+		ToggleButton.Name = "ToggleButton"
+		ToggleButton.Parent = Toggle
+		ToggleButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		ToggleButton.BackgroundTransparency = 1.000
+		ToggleButton.Size = UDim2.new(1, 0, 1, 0)
+		ToggleButton.Font = Enum.Font.SourceSans
+		ToggleButton.Text = ""
+		ToggleButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+		ToggleButton.TextSize = 14.000
+		local pos1 = UDim2.new(0.0266075395, 0, -0.0102728717, 0)
+		local pos2 = UDim2.new(0.106430158, 0, -0.0184700787, 0)
+		local toggler = false
+		local function togglepos()
+			if toggler then
+				OnSwitch:TweenPosition(pos2,"Out","Back",0.25)
+				OffSwitch:TweenPosition(pos1,"Out","Back",0.25)
+			else
+				OnSwitch:TweenPosition(pos1,"Out","Back",0.25)
+				OffSwitch:TweenPosition(pos2,"Out","Back",0.25)
+			end
+			pcall(callback,toggler)
+			toggler = not toggler
+
+		end
+		TestWindow.CanvasSize = TestWindow.CanvasSize + UDim2.new(0,0,0,35)
+
+		ToggleButton.MouseButton1Down:Connect(togglepos)
+	end
+	function lui:Slider(Text,Min,Max,callback)
+		local callback = callback or function() end
+		local Slider = Instance.new("Frame")
+		local Slider_2 = Instance.new("ImageLabel")
+		local SliderDeco = Instance.new("ImageLabel")
+		local SliderMain = Instance.new("ImageButton")
+		local UIGradient_7 = Instance.new("UIGradient")
+		local UIGradient_8 = Instance.new("UIGradient")
+		local SliderText = Instance.new("TextLabel")
+		local UIGradient_9 = Instance.new("UIGradient")
+
+		Slider.Name = "Slider"
+		Slider.Parent = TestWindow
+		Slider.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Slider.BackgroundTransparency = 1.000
+		Slider.Position = UDim2.new(0, 0, 0.405679584, 0)
+		Slider.Size = UDim2.new(1, 0, 0, 35)
+
+		Slider_2.Name = "Slider"
+		Slider_2.Parent = Slider
+		Slider_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Slider_2.BackgroundTransparency = 1.000
+		Slider_2.Position = UDim2.new(0.599109173, 0, 0.449999988, 0)
+		Slider_2.Size = UDim2.new(0, 123, 0, 10)
+		Slider_2.Image = "rbxassetid://3570695787"
+		Slider_2.ScaleType = Enum.ScaleType.Slice
+		Slider_2.SliceCenter = Rect.new(100, 100, 100, 100)
+		Slider_2.SliceScale = 0.120
+
+		SliderDeco.Name = "SliderDeco"
+		SliderDeco.Parent = Slider_2
+		SliderDeco.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		SliderDeco.BackgroundTransparency = 1.000
+		SliderDeco.Size = UDim2.new(0.100000001, 0, 1, 0)
+		SliderDeco.Image = "rbxassetid://3570695787"
+		SliderDeco.ScaleType = Enum.ScaleType.Slice
+		SliderDeco.SliceCenter = Rect.new(100, 100, 100, 100)
+		SliderDeco.SliceScale = 0.120
+
+		SliderMain.Name = "SliderMain"
+		SliderMain.Parent = SliderDeco
+		SliderMain.BackgroundColor3 = Color3.fromRGB(5, 24, 0)
+		SliderMain.BackgroundTransparency = 1.000
+		SliderMain.BorderSizePixel = 0
+		SliderMain.Position = UDim2.new(0.899999976, 0, 0, 0)
+		SliderMain.Size = UDim2.new(0, 15, 1, 0)
+
+		UIGradient_7.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(161, 161, 161))}
+		UIGradient_7.Rotation = 90
+		UIGradient_7.Parent = SliderDeco
+
+		UIGradient_8.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 7, 102)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
+		UIGradient_8.Rotation = 180
+		UIGradient_8.Parent = Slider_2
+
+		SliderText.Name = "SliderText"
+		SliderText.Parent = Slider
+		SliderText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		SliderText.BackgroundTransparency = 1.000
+		SliderText.Position = UDim2.new(0.0439999998, 0, 0.125, 0)
+		SliderText.Size = UDim2.new(0.76470542, 0, 0.699999988, 0)
+		SliderText.Font = Enum.Font.SourceSansSemibold
+		SliderText.Text = Text
+		SliderText.TextColor3 = Color3.fromRGB(255, 255, 255)
+		SliderText.TextScaled = true
+		SliderText.TextSize = 25.000
+		SliderText.TextWrapped = true
+		SliderText.TextXAlignment = Enum.TextXAlignment.Left
+
+		UIGradient_9.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(161, 161, 161))}
+		UIGradient_9.Rotation = 90
+		UIGradient_9.Parent = SliderText
+
+
+
+		local Player = game:GetService("Players").LocalPlayer
+		local SliderBtn = SliderMain
+		local UIS = game:GetService("UserInputService")
+		local RuS = game:GetService("RunService")
+
+		-- Properties
+		local held = false
+		local percentage = 0
+		local min = 0
+		local outputmin = Min
+		local outputmax = Max
+		local max = 1
+		local step2 = string.len(tostring(outputmax))
+		local step = "0."
+		for i = 0,step2 do
+			step = step.. "0"
+		end
+		step = tonumber(step)
+		max = max / max
+		outputmax = outputmax - outputmin
+
+		local function snap(number, factor)
+			if factor == 0 then
+				return number
+			else
+				return math.floor(number/factor+0.5)*factor
+			end
+		end
+
+		UIS.InputEnded:connect(function(input, processed)
+			if input.UserInputType == Enum.UserInputType.MouseButton1 then
+				held = false
+			end
+		end)
+		
+		SliderBtn.MouseButton1Down:connect(function()
+			held = true
+		end)
+
+		RuS.RenderStepped:connect(function(delta)
+			if held then
+
+				local MousePos = UIS:GetMouseLocation().X
+				local BtnPos = SliderDeco.Size
+				local SliderSize = Slider.AbsoluteSize.X
+				local SliderPos = Slider.AbsolutePosition.X
+				local pos = snap((MousePos-SliderPos)/SliderSize,step)
+				percentage = math.clamp(pos,0,1)
+				--SliderBtn.Position = UDim2.new(percentage,min,BtnPos.Y.Scale, BtnPos.Y.Offset)
+				SliderDeco.Size =UDim2.new(percentage,min,BtnPos.Y.Scale, BtnPos.Y.Offset)
+				pcall(callback,math.floor(percentage * outputmax ))
+			end
+		end)
+
+		TestWindow.CanvasSize = TestWindow.CanvasSize + UDim2.new(0,0,0,35)
+
+	end
+	function lui:ColorPick(Text,callback)
+		local ColorPicker = Instance.new("Frame")
+		local ColourPreview = Instance.new("Frame")
+		local UICorner_8 = Instance.new("UICorner")
+		local ColourGradientFrame = Instance.new("TextButton")
+		local ColourGradient = Instance.new("UIGradient")
+		local Slider_3 = Instance.new("TextButton")
+		local UICorner_9 = Instance.new("UICorner")
+		local DarknessGradientFrame = Instance.new("TextButton")
+		local Slider_4 = Instance.new("TextButton")
+		local DarknessGradient = Instance.new("UIGradient")
+		local UICorner_10 = Instance.new("UICorner")
+		local ToggleText = Instance.new("TextLabel")
+		local UIGradient_10 = Instance.new("UIGradient")
+
+		ColorPicker.Name = "ColorPicker"
+		ColorPicker.Parent = TestWindow
+		ColorPicker.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		ColorPicker.BackgroundTransparency = 1.000
+		ColorPicker.Position = UDim2.new(0, 0, 0.405679584, 0)
+		ColorPicker.Size = UDim2.new(1, 0, 0, 35)
+
+		ColourPreview.Name = "ColourPreview"
+		ColourPreview.Parent = ColorPicker
+		ColourPreview.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+		ColourPreview.BorderSizePixel = 0
+		ColourPreview.Position = UDim2.new(0.916187763, 0, 0.238162994, 0)
+		ColourPreview.Size = UDim2.new(0, 20, 0, 20)
+
+		UICorner_8.CornerRadius = UDim.new(0, 20)
+		UICorner_8.Parent = ColourPreview
+
+		ColourGradientFrame.Name = "ColourGradientFrame"
+		ColourGradientFrame.Parent = ColorPicker
+		ColourGradientFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		ColourGradientFrame.BorderSizePixel = 0
+		ColourGradientFrame.Position = UDim2.new(0.293907344, 0, 0.138163, 0)
+		ColourGradientFrame.Size = UDim2.new(0.605869949, 0, 0.311837882, 0)
+		ColourGradientFrame.AutoButtonColor = false
+		ColourGradientFrame.Font = Enum.Font.SourceSans
+		ColourGradientFrame.Text = ""
+		ColourGradientFrame.TextColor3 = Color3.fromRGB(0, 0, 0)
+		ColourGradientFrame.TextSize = 14.000
+
+		ColourGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(0.20, Color3.fromRGB(255, 255, 0)), ColorSequenceKeypoint.new(0.40, Color3.fromRGB(0, 255, 0)), ColorSequenceKeypoint.new(0.60, Color3.fromRGB(0, 255, 255)), ColorSequenceKeypoint.new(0.80, Color3.fromRGB(0, 0, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 0, 255))}
+		ColourGradient.Name = "ColourGradient"
+		ColourGradient.Parent = ColourGradientFrame
+
+		Slider_3.Name = "Slider"
+		Slider_3.Parent = ColourGradientFrame
+		Slider_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Slider_3.BorderSizePixel = 0
+		Slider_3.Position = UDim2.new(0, 8, 0, 0)
+		Slider_3.Size = UDim2.new(0.00300000003, 0, 1, 0)
+		Slider_3.AutoButtonColor = false
+		Slider_3.Font = Enum.Font.SourceSans
+		Slider_3.Text = ""
+		Slider_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+		Slider_3.TextSize = 14.000
+
+		UICorner_9.Parent = ColourGradientFrame
+
+		DarknessGradientFrame.Name = "DarknessGradientFrame"
+		DarknessGradientFrame.Parent = ColorPicker
+		DarknessGradientFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		DarknessGradientFrame.BorderSizePixel = 0
+		DarknessGradientFrame.Position = UDim2.new(0.293907344, 0, 0.587999701, 0)
+		DarknessGradientFrame.Size = UDim2.new(0.60420996, 0, 0.312000006, 0)
+		DarknessGradientFrame.AutoButtonColor = false
+		DarknessGradientFrame.Font = Enum.Font.SourceSans
+		DarknessGradientFrame.Text = ""
+		DarknessGradientFrame.TextColor3 = Color3.fromRGB(0, 0, 0)
+		DarknessGradientFrame.TextSize = 14.000
+
+		Slider_4.Name = "Slider"
+		Slider_4.Parent = DarknessGradientFrame
+		Slider_4.BackgroundColor3 = Color3.fromRGB(255, 149, 0)
+		Slider_4.BorderSizePixel = 0
+		Slider_4.Position = UDim2.new(0, 8, 0, 0)
+		Slider_4.Size = UDim2.new(0.00300000003, 0, 1, 0)
+		Slider_4.AutoButtonColor = false
+		Slider_4.Font = Enum.Font.SourceSans
+		Slider_4.Text = ""
+		Slider_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+		Slider_4.TextSize = 14.000
+
+		DarknessGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
+		DarknessGradient.Name = "DarknessGradient"
+		DarknessGradient.Parent = DarknessGradientFrame
+
+		UICorner_10.Parent = DarknessGradientFrame
+
+		ToggleText.Name = "ToggleText"
+		ToggleText.Parent = ColorPicker
+		ToggleText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		ToggleText.BackgroundTransparency = 1.000
+		ToggleText.Position = UDim2.new(0.0439251252, 0, 0.125, 0)
+		ToggleText.Size = UDim2.new(0.248001605, 0, 0.699999988, 0)
+		ToggleText.Font = Enum.Font.SourceSansSemibold
+		ToggleText.Text = Text
+		ToggleText.TextColor3 = Color3.fromRGB(255, 255, 255)
+		ToggleText.TextScaled = true
+		ToggleText.TextSize = 25.000
+		ToggleText.TextWrapped = true
+		ToggleText.TextXAlignment = Enum.TextXAlignment.Left
+
+		UIGradient_10.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(161, 161, 161))}
+		UIGradient_10.Rotation = 90
+		UIGradient_10.Parent = ToggleText
+
+		local colourGradientFrame = ColourGradientFrame
+		local colourSlider = colourGradientFrame:WaitForChild("Slider")
+
+		local darknessGradientFrame =  DarknessGradientFrame
+		local darknessSlider = darknessGradientFrame:WaitForChild("Slider")
+
+		local colourPreview = ColourPreview
+
+
+		local mouse = game.Players.LocalPlayer:GetMouse()
+
+		local movingColourSlider = false
+		local movingDarknessSlider = false
+
+
+		colourSlider.MouseButton1Down:Connect(function()
+
+			movingColourSlider = true
+		end)
+		colourGradientFrame.MouseButton1Down:Connect(function()
+
+			movingColourSlider = true
+		end)
+		darknessSlider.MouseButton1Down:Connect(function()
+
+			movingDarknessSlider = true
+		end)
+		darknessGradientFrame.MouseButton1Down:Connect(function()
+
+			movingDarknessSlider = true
+		end)
+		colourSlider.MouseButton1Up:Connect(function()
+
+			movingColourSlider = false
+		end)
+		colourGradientFrame.MouseButton1Up:Connect(function()
+
+			movingColourSlider = false
+		end)
+		darknessSlider.MouseButton1Up:Connect(function()
+
+			movingDarknessSlider = false
+		end)
+		darknessGradientFrame.MouseButton1Up:Connect(function()
+
+			movingDarknessSlider = false
+		end)
+		mouse.Button1Up:Connect(function()
+
+			movingColourSlider = false
+			movingDarknessSlider = false
+		end)
+		mouse.Move:Connect(function()
+
+			if movingColourSlider then
+
+				local xOffset = (mouse.X - colourGradientFrame.AbsolutePosition.X)
+
+				xOffset = math.clamp(xOffset, 0, colourGradientFrame.AbsoluteSize.X)
+
+				local sliderPosNew = UDim2.new(0, xOffset, colourSlider.Position.Y)
+				colourSlider.Position = sliderPosNew
+			end
+
+			if movingDarknessSlider then
+
+				local xOffset = (mouse.X - colourGradientFrame.AbsolutePosition.X)
+
+				xOffset = math.clamp(xOffset, 0, colourGradientFrame.AbsoluteSize.X)
+
+				local sliderPosNew = UDim2.new(0, xOffset, colourSlider.Position.Y)
+				darknessSlider.Position = sliderPosNew
+			end
+		end)
+
+
+
+		local function returnColour(percentage, gradientKeyPoints)
+
+			local leftColour = gradientKeyPoints[1]
+			local rightColour = gradientKeyPoints[#gradientKeyPoints]
+
+			local lerpPercent = 0.5
+			local colour = leftColour.Value
+
+
+			for i = 1, #gradientKeyPoints - 1 do
+
+				if gradientKeyPoints[i].Time <= percentage and gradientKeyPoints[i + 1].Time >= percentage then
+
+					leftColour = gradientKeyPoints[i]
+					rightColour = gradientKeyPoints[i + 1]
+
+					lerpPercent = (percentage - leftColour.Time) / (rightColour.Time - leftColour.Time)
+
+					colour = leftColour.Value:Lerp(rightColour.Value, lerpPercent)
+
+					return colour
+				end
+			end
+		end
+
+		local function updateColourPreview()
+
+			local colourMinXPos = colourGradientFrame.AbsolutePosition.X
+			local colourMaxXPos = colourMinXPos + colourGradientFrame.AbsoluteSize.X
+
+			local colourXPixelSize = colourMaxXPos - colourMinXPos
+
+			local colourSliderX = colourSlider.AbsolutePosition.X
+
+			local colourXPos = (colourSliderX - colourMinXPos) / colourXPixelSize
+
+
+			local darknessMinXPos = darknessGradientFrame.AbsolutePosition.X
+			local darknessMaxXPos = darknessMinXPos + darknessGradientFrame.AbsoluteSize.X
+
+			local darknessXPixelSize = darknessMaxXPos - darknessMinXPos
+
+			local darknessSliderX = darknessSlider.AbsolutePosition.X
+
+			local darknessXPos = (darknessSliderX - darknessMinXPos) / darknessXPixelSize
+
+
+			local darkness = returnColour(darknessXPos, darknessGradientFrame.DarknessGradient.Color.Keypoints)
+			local darknessR, darknessG, darknessB = 255 - math.floor(darkness.R * 255), 255 - math.floor(darkness.G * 255), 255 - math.floor(darkness.B * 255)
+
+
+			local colour = returnColour(colourXPos, colourGradientFrame.ColourGradient.Color.Keypoints)
+			local colourR, colourG, colourB = math.floor(colour.R * 255), math.floor(colour.G * 255), math.floor(colour.B * 255)
+
+			local resultColour = Color3.fromRGB(colourR - darknessR, colourG - darknessG, colourB - darknessB)
+
+			colourPreview.BackgroundColor3 = resultColour
+
+
+			pcall(callback,ColourPreview.BackgroundColor3)
+		end
+
+
+		colourSlider:GetPropertyChangedSignal("Position"):Connect(updateColourPreview)
+		darknessSlider:GetPropertyChangedSignal("Position"):Connect(updateColourPreview)
+
+
+		TestWindow.CanvasSize = TestWindow.CanvasSize + UDim2.new(0,0,0,40)
+
+
+	end
+	return lui
+end
+local function Main()
+	cleanup()
+	GoToMenu()
+	ui:MakeText("Ui lib made by BetterLua devs")
+	ui:MakeText("Join here https://discord.gg/37TysQr")
+end
+Main()
