@@ -29,7 +29,7 @@ local UIGradient_3 = Instance.new("UIGradient")
 --Properties:
 
 CleanerUi.Name = "CleanerUi Lib"
-CleanerUi.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+CleanerUi.Parent = game.CoreGui
 CleanerUi.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = CleanerUi
